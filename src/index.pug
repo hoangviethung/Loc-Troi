@@ -1,0 +1,12 @@
+extends templates/_layout/_layout
+
+block var
+	- let title = 'Page | Index';
+	- let bodyClass = 'index-page';
+
+block loading
+	include templates/_layout/_loading
+block banner,breadcrumb
+block main
+	include templates/index/i-1
+block scripts
