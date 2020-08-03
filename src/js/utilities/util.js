@@ -1,10 +1,17 @@
 export const getSVGs = (selector) => {
-	const images =
-		Array.from(document.querySelectorAll(selector)) ||
-		Array.from(document.querySelectorAll("img.svg"));
+	let images;
+	if (selector) {
+		images = Array.from(document.querySelectorAll(selector));
+	} else {
+		images = Array.from(document.querySelectorAll("img.svg"));
+	}
 	for (let i = 0; i < images.length; i++) {
-		const url =
-			images[i].getAttribute("src") || images[i].getAttribute("data-src");
+		let url;
+		if (images[i].getAttribute("data-src") != null) {
+			url = images[i].getAttribute("data-src");
+		} else {
+			url = images[i].getAttribute("src");
+		}
 		const getImageRequest = new XMLHttpRequest();
 		getImageRequest.open("GET", url, true);
 		getImageRequest.onload = function (e) {

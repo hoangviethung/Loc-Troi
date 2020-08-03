@@ -32,7 +32,7 @@ export default class Fullpage {
 			this.beforeSlideChange = opts.on.beforeSlideChange;
 		}
 		this.slides.forEach((slide) => {
-			this.titles.push(slide.getAttribute("fp-title"));
+			this.titles.push(slide.getAttribute("fp-tooltip"));
 		});
 		this.slidesLength = this.slides.length;
 		this.init();
@@ -58,9 +58,9 @@ export default class Fullpage {
 			this.navigationsWrapper.classList.add("fp-navigation");
 			let navigationItemsString = "";
 			for (let i = 0; i < this.slidesLength; i++) {
-				navigationItemsString += `<div class="fp-nav-item" fp-target=${i}><span class="fp-number">${
+				navigationItemsString += `<div class="fp-nav-item" fp-target=${i}><span class="fp-index">${
 					i + 1
-				}</span><span class="fp-title">${this.titles[i]}</span></div>`;
+					}</span><span class="fp-tooltip">${this.titles[i]}</span></div>`;
 			}
 			this.navigationsWrapper.innerHTML = navigationItemsString;
 			this.container.append(this.navigationsWrapper);
@@ -200,7 +200,7 @@ export default class Fullpage {
 							(window.innerHeight / this.opts.speed) * elapsed,
 							window.innerHeight
 						)
-					}px)`;
+						}px)`;
 				else {
 					// slideUp down scroll up
 					element.style.transform = `translateY(${
@@ -208,7 +208,7 @@ export default class Fullpage {
 							(window.innerHeight / this.opts.speed) * elapsed,
 							window.innerHeight
 						) - window.innerHeight
-					}px)`;
+						}px)`;
 				}
 
 				if (elapsed < this.opts.speed) {
