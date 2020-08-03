@@ -1,0 +1,9 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 106px;
+	background: rgba($color: map-get($color, x-black), $alpha: 0.2);
+	z-index: 600;
+}
