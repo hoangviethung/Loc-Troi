@@ -107,6 +107,10 @@
 	text-align: center;
 }
 
+.ta-r {
+	text-align: right;
+}
+
 .td-u {
 	text-decoration: underline;
 }
@@ -117,4 +121,32 @@
 
 .w-100 {
 	width: 100%;
+}
+
+.cl-white {
+	color: map-get($color, x-white);
+}
+
+.cl-black {
+	color: map-get($color, x-black);
+}
+
+.cl-gray {
+	color: map-get($color, x-gray);
+}
+
+.cl-green {
+	color: map-get($color, x-green);
+}
+
+.cl-irish {
+	color: map-get($color, x-irish);
+}
+
+.cl-red {
+	color: map-get($color, x-red);
+}
+
+.cl-yellow {
+	color: map-get($color, x-yellow);
 }

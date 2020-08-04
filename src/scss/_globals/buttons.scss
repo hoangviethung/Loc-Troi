@@ -1,7 +1,57 @@
 .btn {
+	cursor: pointer;
+	user-select: none;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	border: 0;
 	padding: 0;
+}
+
+.btn-read-more-style-1 {
+	position: relative;
+	color: map-get($color, x-white);
+	font-weight: 700;
+	font-style: italic;
+	padding-right: 25px;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url(../assets/icons/double-arrow-right-white.svg);
+		background-size: 100% 100%;
+	}
+
+	&[gray] {
+		color: map-get($color, x-gray);
+		&:after {
+			background-image: url(../assets/icons/double-arrow-right-gray.svg);
+		}
+	}
+}
+
+.btn-read-more-style-2 {
+	padding: 5px 15px;
+	background: #008347;
+	border: 1px solid transparent;
+	.text {
+		position: relative;
+		color: map-get($color, x-white);
+		padding-right: 20px;
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 14px;
+			height: 10px;
+			transform: translateY(-50%);
+			background-image: url(../assets/icons/single-arrow-left-white.svg);
+			background-size: 100% 100%;
+		}
+	}
 }

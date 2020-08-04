@@ -1,0 +1,54 @@
+.section-homepage {
+	.section-title,
+	.section-image-circle {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.section-title {
+		left: 10px;
+	}
+
+	.section-image-circle {
+		right: 15%;
+	}
+
+	.section-services {
+		position: fixed;
+		padding: 35px;
+		bottom: 0;
+		right: 0;
+		z-index: 100;
+		background: rgba($color: map-get($color, x-black), $alpha: 0.4);
+	}
+
+	.services__wrapper {
+		display: flex;
+	}
+
+	.service__item + .service__item {
+		margin-left: 45px;
+	}
+
+	.service__icon {
+		height: 45px;
+		img,
+		svg {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.service__name {
+		margin-top: 20px;
+		padding-top: 5px;
+		padding-right: 10px;
+		border-top: 1px solid map-get($color, x-white);
+		border-right: 1px solid map-get($color, x-white);
+		span {
+			font-size: 11px;
+			color: map-get($color, x-white);
+		}
+	}
+}

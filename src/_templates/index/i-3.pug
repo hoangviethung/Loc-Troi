@@ -1,2 +1,24 @@
 .fp-slide(fp-tooltip="Tin tức")
-	section.setting-section
+	section.setting-section.section-news
+		.container
+			.container-custom.container-1385px
+				.section-title-basic.ta-c
+					h2(green) TIN TỨC HOẠT ĐỘNG
+				.slider-news
+					.swiper-container
+						.swiper-wrapper
+							-for(i=1;i<4;i++)
+								.swiper-slide
+									a(href="#").news__item
+										.news__thumbnail.ov-h.background-overlay(style="--url: url(../assets/images/background-overlay/overlay-1.svg)")
+											img.ofcv(src=`assets/images/index-3/${i}.png`, alt="NEWS")
+										.news__descriptions
+											.news__title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
+											.news__desc.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+											.news__readmore
+												.btn.btn-read-more-style-2
+													.text Đọc tiếp
+					.slider-news-button-prev
+					.slider-news-button-next
+				.news-read-more.ta-c
+					a.btn.tt-u.btn-read-more-style-1(gray) xem thêm

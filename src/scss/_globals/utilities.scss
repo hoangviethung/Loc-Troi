@@ -73,7 +73,7 @@ textarea {
 	filter: blur(10px);
 	transition: filter 1s;
 
-	&.lazy-loaded {
+	&.lazyloaded {
 		filter: blur(0);
 	}
 }
@@ -102,5 +102,40 @@ textarea {
 
 	&-3 {
 		-webkit-line-clamp: 3;
+	}
+	&-4 {
+		-webkit-line-clamp: 4;
+	}
+	&-5 {
+		-webkit-line-clamp: 5;
+	}
+}
+
+.background-overlay {
+	position: relative;
+	&:after {
+		content: "";
+		pointer-events: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-image: var(--url);
+		background-blend-mode: multiply;
+		mix-blend-mode: multiply;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 10;
+	}
+	&.bg-under {
+		&:after {
+			z-index: -1;
+		}
+	}
+	&.bg-size-cover {
+		&:after {
+			background-size: cover;
+		}
 	}
 }
