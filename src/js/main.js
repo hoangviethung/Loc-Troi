@@ -1,5 +1,7 @@
 import { getSVGs, Loading } from "./utilities/util";
 import Fullpage from "./libraries/Fullpage";
+import * as animation from "./animation/animation";
+
 // INIT FULLPAGE
 const initFullpage = () => {
 	// create instance fullpage
@@ -10,29 +12,40 @@ const initFullpage = () => {
 		slideClass: ".fp-slide",
 		navigation: true,
 		on: {
-			// event is fired before slide start transition
+			// Event is fired before slide start transition
 			beforeSlideChange: function (currentSlide, nextSlide, currentIndex, nextIndex) {
-				if (nextIndex + 1 == fp.getSlideLenght()) {
-					fp.nextEl.classList.add('d-n');
-					fp.prevEl.classList.remove('d-n');
-				} else {
-					fp.nextEl.classList.remove('d-n');
-					fp.prevEl.classList.add('d-n');
-				}
+				actionNavigation(nextIndex);
 			},
-			// event is fired after slide end transition
+			// Event is fired after slide end transition
 			afterSlideChange: function (currentSlide, currentIndex) {
+				if (currentIndex == 0) {
+					animation.allAnimeFullpageIndex__1();
+				}
 			},
 		},
 	});
-	// method get current index of fullpage
-	fp.getIndex();
-	// method get slide lenght
-	fp.getSlideLenght();
-	// method allow or not allow scroll to slide fullpage: true = allow, false = not allow
-	fp.scroll(true);
 	// HIIDEN BUTTON PREV
 	fp.prevEl.classList.add('d-n');
+	// FUNCTION MORE HERE !!!
+	const actionNavigation = (nextIndex) => {
+		if (nextIndex + 1 == fp.getSlideLenght()) {
+			fp.nextEl.classList.add('d-n');
+			fp.prevEl.classList.remove('d-n');
+		} else {
+			fp.nextEl.classList.remove('d-n');
+			fp.prevEl.classList.add('d-n');
+		}
+	}
+	// ACTION AFTER LOADING
+	(function () {
+		if (fp.getIndex() == 0) {
+			Loading().then(() => {
+				if (fp.getIndex() == 0) {
+					animation.allAnimeFullpageIndex__1();
+				}
+			})
+		}
+	})()
 }
 
 const setBackgroundImageSection = () => {
@@ -42,27 +55,6 @@ const setBackgroundImageSection = () => {
 	datas.forEach((item) => {
 		const link = item.getAttribute('fp-bg')
 		item.setAttribute('style', `background-image:url(${link})`);
-	})
-}
-
-const initAnimatServiceHomePage = () => {
-	anime({
-		targets: '.service__item',
-		translateX: function (el) {
-			return el.getAttribute('data-x');
-		},
-		translateY: function (el, i) {
-			return 50 + (-50 * i);
-		},
-		scale: function (el, i, l) {
-			return (l - i) + .25;
-		},
-		rotate: function () { return anime.random(-360, 360); },
-		borderRadius: function () { return ['50%', anime.random(10, 35) + '%']; },
-		duration: function () { return anime.random(1200, 1800); },
-		delay: function () { return anime.random(0, 400); },
-		direction: 'alternate',
-		loop: true
 	})
 }
 
@@ -92,7 +84,6 @@ const initSliderProducts = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	getSVGs();
-	Loading();
 	// INIT FULLPAGE
 	initFullpage();
 	// SET BACKGROUND IMAGE SECTION

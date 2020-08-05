@@ -49,7 +49,7 @@
 
 .fp-navigation {
 	position: fixed;
-	margin-right: 60px;
+	margin-right: 20px;
 	z-index: 100;
 	right: 0;
 	top: 50%;
@@ -140,6 +140,9 @@
 		width: 1px;
 		background: rgba($color: map-get($color, x-white), $alpha: 0.5);
 	}
+	@media (min-width: 1440px) {
+		margin-right: 60px;
+	}
 }
 
 .fp-buttons {
@@ -162,7 +165,7 @@
 
 .fp-links {
 	position: fixed;
-	margin-left: 60px;
+	margin-left: 20px;
 	top: 50%;
 	transform-origin: 0 0;
 	transform: translateY(-50%);
@@ -196,6 +199,9 @@
 	}
 	.fp-link-item + .fp-link-item {
 		margin-top: 25px;
+	}
+	@media (min-width: 1440px) {
+		margin-left: 60px;
 	}
 }
 

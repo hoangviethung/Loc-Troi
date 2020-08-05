@@ -6,6 +6,21 @@
 	background-position: center center;
 }
 
+.typography-animate {
+	&-1 {
+		.letter {
+			display: inline-block;
+		}
+	}
+	&-2,
+	&-3 {
+		.letter {
+			display: inline-block;
+			transform-origin: 0 0;
+		}
+	}
+}
+
 .section-title {
 	.text {
 		font-size: var(--fz);

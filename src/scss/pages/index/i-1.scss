@@ -11,7 +11,10 @@
 	}
 
 	.section-image-circle {
-		right: 15%;
+		right: 10px;
+		@media (min-width: 1440px) {
+			right: 15%;
+		}
 	}
 
 	.section-services {

@@ -235,7 +235,8 @@ export default class Fullpage {
 		}
 	}
 
-	// method
+	// METHOD HERE !!!
+
 	slideTo(i) {
 		this.state.nextIndex = Number(i);
 		this.changeSlide();
