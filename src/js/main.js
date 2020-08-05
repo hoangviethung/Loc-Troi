@@ -20,6 +20,10 @@ const initFullpage = () => {
 			afterSlideChange: function (currentSlide, currentIndex) {
 				if (currentIndex == 0) {
 					animation.allAnimeFullpageIndex__1();
+				} else if (currentIndex == 1) {
+					animation.allAnimeFullpageIndex__2();
+				} else if (currentIndex == 4) {
+					animation.allAnimeFullpageIndex__5();
 				}
 			},
 		},
