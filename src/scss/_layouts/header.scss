@@ -3,7 +3,114 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 106px;
 	background: rgba($color: map-get($color, x-black), $alpha: 0.2);
 	z-index: 600;
+}
+
+.header__logo {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.header__nav--top {
+	padding-top: 24px;
+}
+
+.header__nav--bottom {
+	padding-top: 22px;
+	padding-bottom: 13px;
+}
+
+.navtop__wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.header__languages {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	.languages__link {
+		color: map-get($color, x-white);
+	}
+	.languages__item + .languages__item {
+		position: relative;
+		height: 100%;
+		margin-left: 10px;
+		padding-left: 10px;
+		&:after {
+			content: "|";
+			left: 0;
+			top: 42%;
+			transform: translateY(-50%);
+			position: absolute;
+			color: map-get($color, x-white);
+		}
+	}
+}
+
+.header__quick-links {
+	display: flex;
+	margin-left: 30px;
+	.quick-links__item + .quick-links__item {
+		margin-left: 10px;
+	}
+	.item__link {
+		font-size: 17px;
+		color: map-get($color, x-white);
+	}
+}
+
+.header__search {
+	margin-left: 50px;
+	.search__form {
+		position: relative;
+	}
+	.search__input {
+		input {
+			color: map-get($color, x-white);
+			background: rgba($color: #ffffff, $alpha: 0.3);
+			border: 0;
+			height: 28px;
+			padding: 0 35px 0 20px;
+			border-radius: 15px;
+			width: 170px;
+			font-size: 14px;
+			&::placeholder {
+				color: #dedede;
+			}
+		}
+	}
+}
+
+.searh__button {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	button {
+		background: none;
+	}
+}
+
+.navbottom__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nav-bar {
+	margin-left: auto;
+	display: flex;
+}
+
+.navBar__item + .navBar__item {
+	margin-left: 40px;
+}
+
+.navBar__link {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	color: map-get($color, x-white);
 }

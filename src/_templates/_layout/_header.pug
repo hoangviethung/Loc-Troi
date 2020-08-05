@@ -1,1 +1,42 @@
 header
+	.container.h-100
+		.container-custom.container-1385px.h-100
+			.header__logo
+				a.headerLogo__link(href="index.html")
+					img.lazyload.blur-up(data-src="./assets/logo.png", alt="LOC-TROI")
+			.header__nav--top
+				.navtop__wrapper
+					.header__languages.language
+						.languages__item.item(data-language="vi")
+							a.languages__link(href="#") VN
+						.languages__item.item(data-language="en")
+						a.languages__link(href="#") ENG
+					.header__quick-links
+						.quick-links__item
+							a(href="#").item__link Tuyển dụng
+					.header__search
+						form(action="#")
+							.search__form
+								.search__input
+									input(type="search" placeholder="...")
+								.searh__button
+									button.btn
+										.icon
+											img(src="./assets/icons/search.svg", alt="SEARCH")
+			.header__nav--bottom
+				.navbottom__wrapper
+					.nav-bar
+						.navBar__item
+							a(href="#").navBar__link giới thiệu
+						.navBar__item
+							a(href="#").navBar__link tin tức
+						.navBar__item
+							a(href="#").navBar__link sản phẩm
+						.navBar__item
+							a(href="#").navBar__link quan hệ cổ đông
+						.navBar__item
+							a(href="#").navBar__link phát triển bền vững
+						.navBar__item
+							a(href="#").navBar__link media
+						.navBar__item
+							a(href="#").navBar__link liên hệ
