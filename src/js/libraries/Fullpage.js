@@ -50,6 +50,7 @@ export default class Fullpage {
 		this.mouseOnScroll();
 		this.buttonsOnClick();
 		this.autoChangeNavigationOnSlide();
+		this.getSlideLenght();
 	}
 
 	generateNavigation() {
@@ -238,6 +239,10 @@ export default class Fullpage {
 	slideTo(i) {
 		this.state.nextIndex = Number(i);
 		this.changeSlide();
+	}
+
+	getSlideLenght() {
+		return this.slidesLength
 	}
 
 	getIndex() {

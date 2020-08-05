@@ -12,17 +12,27 @@ const initFullpage = () => {
 		on: {
 			// event is fired before slide start transition
 			beforeSlideChange: function (currentSlide, nextSlide, currentIndex, nextIndex) {
+				if (nextIndex + 1 == fp.getSlideLenght()) {
+					fp.nextEl.classList.add('d-n');
+					fp.prevEl.classList.remove('d-n');
+				} else {
+					fp.nextEl.classList.remove('d-n');
+					fp.prevEl.classList.add('d-n');
+				}
 			},
 			// event is fired after slide end transition
 			afterSlideChange: function (currentSlide, currentIndex) {
 			},
 		},
 	});
-
 	// method get current index of fullpage
 	fp.getIndex();
+	// method get slide lenght
+	fp.getSlideLenght();
 	// method allow or not allow scroll to slide fullpage: true = allow, false = not allow
 	fp.scroll(true);
+	// HIIDEN BUTTON PREV
+	fp.prevEl.classList.add('d-n');
 }
 
 const setBackgroundImageSection = () => {
