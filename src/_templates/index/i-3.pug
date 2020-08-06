@@ -1,24 +1,71 @@
-.fp-slide(fp-tooltip="Tin tức")
-	section.setting-section.section-news
+.fp-slide(fp-tooltip="Sản phẩm")
+	section.setting-section.section-products(fp-bg="./assets/images/background-fullpage/index-3.png")
 		.container
 			.container-custom.container-1385px
-				.section-title-basic.ta-c
-					h2(green) TIN TỨC HOẠT ĐỘNG
-				.slider-news
+				.section-title-basic.typography-animate-3.ta-c
+					.text
+						h2(white) SẢN PHẨM
+						span.line(white)
+				.slider-products
 					.swiper-container
 						.swiper-wrapper
-							-for(i=1;i<4;i++)
-								.swiper-slide
-									a(href="#").news__item
-										.news__thumbnail.ov-h.background-overlay(style="--url: url(../assets/images/background-overlay/overlay-1.svg)")
-											img.ofcv(src=`assets/images/index-3/${i}.png`, alt="NEWS")
-										.news__descriptions
-											.news__title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
-											.news__desc.lcl.lcl-3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
-											.news__readmore
-												.btn.btn-read-more-style-2
-													.text Đọc tiếp
-					.slider-news-button-prev
-					.slider-news-button-next
-				.news-read-more.ta-c
-					a.btn.tt-u.btn-read-more-style-1(gray) xem thêm
+							.swiper-slide
+								a(href="#").product__item
+									.product__thumbnail.ov-h
+										img(src=`assets/images/index-3/1.png`, alt="product")
+									.product__descriptions
+										.product__name.lcl.lcl-2 GẠO MẦM VIBIGABA
+										.product__desc
+											.desc__item
+												p Gía: 100.000 Đ
+											.desc__item
+												p Khối lượng: 2 kg
+										.product__readmore
+											.btn.btn-read-more-style-2
+												.text Xem chi tiết
+							.swiper-slide
+								a(href="#").product__item
+									.product__thumbnail.ov-h
+										img(src=`assets/images/index-3/2.png`, alt="product")
+									.product__descriptions
+										.product__name.lcl.lcl-1 GẠO HẠT NGỌC TRỜI
+										.product__desc
+											.desc__item
+												p Gía: 100.000 Đ
+											.desc__item
+												p Khối lượng: 2 kg
+										.product__readmore
+											.btn.btn-read-more-style-2
+												.text Xem chi tiết
+							.swiper-slide
+								a(href="#").product__item
+									.product__thumbnail.ov-h
+										img(src=`assets/images/index-3/3.png`, alt="product")
+									.product__descriptions
+										.product__name.lcl.lcl-2 PHÂN HỮU CƠ KHOÁNG
+										.product__desc
+											.desc__item
+												p Gía: 100.000 Đ
+											.desc__item
+												p Khối lượng: 2 kg
+										.product__readmore
+											.btn.btn-read-more-style-2
+												.text Xem chi tiết
+							.swiper-slide
+								a(href="#").product__item
+									.product__thumbnail.ov-h
+										img(src=`assets/images/index-3/4.png`, alt="product")
+									.product__descriptions
+										.product__name.lcl.lcl-2 DƯA HẤU LAI F1
+										.product__desc
+											.desc__item
+												p Gía: 100.000 Đ
+											.desc__item
+												p Khối lượng: 2 kg
+										.product__readmore
+											.btn.btn-read-more-style-2
+												.text Xem chi tiết
+					.slider-products-button-prev
+					.slider-products-button-next
+				.section-read-more-has-line.ta-c.ta-c
+					a.btn.tt-u.btn-read-more-style-1 xem thêm

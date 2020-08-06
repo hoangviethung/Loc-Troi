@@ -5,6 +5,7 @@ header {
 	width: 100%;
 	background: rgba($color: map-get($color, x-black), $alpha: 0.2);
 	z-index: 600;
+	transition: 0.5s all ease-in-out;
 }
 
 .header__logo {
@@ -113,4 +114,40 @@ header {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	color: map-get($color, x-white);
+}
+
+// CUSTOM TEMPLATE
+
+header.template--white {
+	background: map-get($color, x-white);
+	box-shadow: 0 3px 6px rgba($color: map-get($color, x-black), $alpha: 0.16);
+	.header__languages {
+		.languages__link {
+			color: map-get($color, x-gray);
+		}
+		.languages__item + .languages__item {
+			&:after {
+				color: map-get($color, x-gray);
+			}
+		}
+	}
+	.header__quick-links {
+		.item__link {
+			color: map-get($color, x-gray);
+		}
+	}
+	.header__search {
+		.search__input {
+			input {
+				color: map-get($color, x-gray);
+				background: rgba($color: #707070, $alpha: 0.3);
+				&::placeholder {
+					color: map-get($color, x-gray);
+				}
+			}
+		}
+	}
+	.navBar__link {
+		color: map-get($color, x-gray);
+	}
 }

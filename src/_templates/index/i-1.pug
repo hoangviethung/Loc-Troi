@@ -1,43 +1,42 @@
-.fp-slide(fp-tooltip="Trang chủ")
-	section.setting-section.section-homepage(fp-bg="./assets/images/background-fullpage/index-1.png")
+.fp-slide(fp-tooltip="Giới thiệu")
+	section.setting-section.section-about(fp-bg="./assets/images/background-fullpage/index-1.png")
 		.container.h-100
 			.container-custom.container-1385px.h-100
-				.section-title
-					.text.cl-white.typography-animate-2(style="--fz: 10.1rem") TẬP ĐOÀN
-					.text.cl-irish.typography-animate-1(style="--fz: 13rem") NÔNG NGHIỆP
-					.text.cl-green.typography-animate-2(style="--fz: 9.3rem") TRI THỨC
-				.section-image-circle
-					.img.ov-h
-						img.ofcv.lazyload.blur-up(data-src="./assets/images/index-1/item-section.png", alt="ITEM-HOME-PAGE")
-		.section-services
-			.services__wrapper
-				a(href="#").service__item
-					.service__icon
-						img.svg(src="./assets/icons/service-1.svg", alt="")
-					.service__name
-						span THỰC PHẨM
-				a(href="#").service__item
-					.service__icon
-						img.svg(src="./assets/icons/service-2.svg", alt="")
-					.service__name
-						span DỊCH VỤ
-				a(href="#").service__item
-					.service__icon
-						img.svg(src="./assets/icons/service-3.svg", alt="")
-					.service__name
-						span CHUỖI GIÁ TRỊ
-				a(href="#").service__item
-					.service__icon
-						img.svg(src="./assets/icons/service-4.svg", alt="")
-					.service__name
-						span CÙNG NÔNG DÂN RA ĐỒNG
-				a(href="#").service__item
-					.service__icon
-						img.svg(src="./assets/icons/service-5.svg", alt="")
-					.service__name
-						span NGHIÊN CỨU & PHÁT TRIỂN
-				a(href="#").service__item
-					.service__icon
-						img.svg(src="./assets/icons/service-6.svg", alt="")
-					.service__name
-						span BẢO VỆ THỰC VẬT
+				.section-about__wrapper
+					.row
+						.col-md-6
+							.about-informations
+								.information__item
+									.information__wrapper
+										.information__value
+											p.round-log(index="0") 24
+										.information__text
+											p.tt-u NĂM THÀNH LẬP
+								.information__item
+									.information__wrapper
+										.information__value
+											p.round-log(index="1") 3200
+										.information__text
+											p.tt-u NHÂN VIÊN
+								.information__item
+									.information__wrapper
+										.information__value
+											p.round-log(index="2") 40
+										.information__text
+											p.tt-u QUỐC GIA
+											p.tt-u SẢN PHẨM HIỆN DIỆN
+								.information__item
+									.information__wrapper
+										.information__value
+											p.round-log(index="3") 100
+										.information__text
+											p.tt-u ĐỐI TÁC
+											p.tt-u TẬP ĐOÀN NÔNG NGHIỆP
+							.about-desc.section-description
+								p.lcl.lcl-3 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu...
+							.about-read-more
+								a.btn.tt-u.btn-read-more-style-1(href="#") xem thêm
+						.col-md-6
+							.section-image-shadow
+								.img.ov-h
+									img.ofcv.lazyload.blur-up(data-src="./assets/images/index-1/item-section.png", alt="ITEM-index-1")

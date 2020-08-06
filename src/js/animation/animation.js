@@ -1,26 +1,38 @@
-export const allAnimeFullpageIndex__1 = () => {
-	typographyAnimateStyle__1();
-	typographyAnimateStyle__2();
+export const allAnimeFullpageIndex__0 = () => {
+	typographyAnimateStyle__1('.section-homepage');
+	typographyAnimateStyle__2('.section-homepage');
 }
 
-export const allAnimeFullpageIndex__2 = () => {
+export const allAnimeFullpageIndex__1 = () => {
 	numberAnimateStyle__1();
 }
 
-export const allAnimeFullpageIndex__5 = () => {
-	typographyAnimateStyle__1();
-	typographyAnimateStyle__2();
+export const allAnimeFullpageIndex__2 = () => {
+	typographyAnimateStyle__3('.section-news');
 }
 
-const typographyAnimateStyle__1 = () => {
+export const allAnimeFullpageIndex__3 = () => {
+	typographyAnimateStyle__3('.section-products');
+}
+
+export const allAnimeFullpageIndex__4 = () => {
+	typographyAnimateStyle__1('.section-development');
+	typographyAnimateStyle__2('.section-development');
+}
+
+export const allAnimeFullpageIndex__5 = () => {
+	typographyAnimateStyle__3('.section-shareholder-relations');
+}
+
+const typographyAnimateStyle__1 = (selector) => {
 	// Wrap every letter in a span
-	const textsWrapper = document.querySelectorAll('.typography-animate-1');
-	textsWrapper.forEach((item) => {
+	const texts = document.querySelectorAll(`${selector} .typography-animate-1`);
+	texts.forEach((item) => {
 		item.innerHTML = item.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 	})
 	anime.timeline()
 		.add({
-			targets: '.typography-animate-1 .letter',
+			targets: `${selector} .typography-animate-1 .letter`,
 			scale: [4, 1],
 			opacity: [0, 1],
 			translateZ: 0,
@@ -28,7 +40,7 @@ const typographyAnimateStyle__1 = () => {
 			duration: 950,
 			delay: (el, i) => 70 * i
 		}).add({
-			targets: '.typography-animate-1',
+			targets: `${selector} .typography-animate-1`,
 			opacity: 1,
 			duration: 1000,
 			easing: "easeOutExpo",
@@ -36,25 +48,51 @@ const typographyAnimateStyle__1 = () => {
 		});
 }
 
-const typographyAnimateStyle__2 = () => {
+const typographyAnimateStyle__2 = (selector) => {
 	// Wrap every letter in a span
-	const textWrappers = document.querySelectorAll('.typography-animate-2');
-	textWrappers.forEach((item) => {
+	const texts = document.querySelectorAll(`${selector} .typography-animate-2`);
+	texts.forEach((item) => {
 		item.innerHTML = item.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 	})
 	anime.timeline()
 		.add({
-			targets: '.typography-animate-2 .letter',
+			targets: `${selector} .typography-animate-2 .letter`,
 			rotateY: [-90, 0],
 			duration: 2000,
 			delay: (el, i) => 45 * i
 		}).add({
-			targets: '.typography-animate-2',
+			targets: `${selector} .typography-animate-2`,
 			opacity: 1,
 			duration: 1000,
 			easing: "easeOutExpo",
 			delay: 3000
 		});
+}
+
+const typographyAnimateStyle__3 = (selector) => {
+	// Wrap every letter in a span
+	var texts = document.querySelectorAll(`${selector} .typography-animate-3 h2`);
+	texts.forEach((item) => {
+		item.innerHTML = item.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+	})
+	anime.timeline()
+		.add({
+			targets: `${selector} .typography-animate-3 h2 .letter`,
+			scale: [0, 1],
+			opacity: [0.5, 1],
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 500,
+			delay: (el, i) => 50 * (i + 1)
+		}).add({
+			targets: `${selector} .typography-animate-3 .line`,
+			scaleX: [0, 1],
+			opacity: [0.5, 1],
+			easing: "easeOutExpo",
+			duration: 1000,
+			offset: '-=875',
+			delay: (el, i, l) => 60 * (l - i)
+		})
 }
 
 const numberAnimateStyle__1 = () => {

@@ -4,6 +4,7 @@ export default class Fullpage {
 	prevEl;
 	nextEl;
 	navigationsWrapper;
+	linksWrapper;
 	slides = [];
 	titles = [];
 	opts = {};
@@ -24,6 +25,7 @@ export default class Fullpage {
 		this.slides = Array.from(
 			this.container.querySelectorAll(this.opts.slideClass)
 		);
+		this.linksWrapper = document.querySelector('.fp-links');
 		// this.afterChangeSlide = opts.on.afterChangeSlide();
 		if (typeof opts.on.afterSlideChange == "function") {
 			this.afterSlideChange = opts.on.afterSlideChange;

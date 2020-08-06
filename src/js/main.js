@@ -15,29 +15,49 @@ const initFullpage = () => {
 			// Event is fired before slide start transition
 			beforeSlideChange: function (currentSlide, nextSlide, currentIndex, nextIndex) {
 				actionNavigation(nextIndex);
+				changeTemplateFullpage(nextIndex);
 			},
 			// Event is fired after slide end transition
 			afterSlideChange: function (currentSlide, currentIndex) {
 				if (currentIndex == 0) {
-					animation.allAnimeFullpageIndex__1();
+					animation.allAnimeFullpageIndex__0();
 				} else if (currentIndex == 1) {
+					animation.allAnimeFullpageIndex__1();
+				} else if (currentIndex == 2) {
 					animation.allAnimeFullpageIndex__2();
+				} else if (currentIndex == 3) {
+					animation.allAnimeFullpageIndex__3();
 				} else if (currentIndex == 4) {
+					animation.allAnimeFullpageIndex__4();
+				} else if (currentIndex == 5) {
 					animation.allAnimeFullpageIndex__5();
 				}
 			},
 		},
 	});
 	// HIIDEN BUTTON PREV
-	fp.prevEl.classList.add('d-n');
+	fp.prevEl.classList.add('hidden-btn');
 	// FUNCTION MORE HERE !!!
 	const actionNavigation = (nextIndex) => {
 		if (nextIndex + 1 == fp.getSlideLenght()) {
-			fp.nextEl.classList.add('d-n');
-			fp.prevEl.classList.remove('d-n');
+			fp.nextEl.classList.add('hidden-btn');
+			fp.prevEl.classList.remove('hidden-btn');
 		} else {
-			fp.nextEl.classList.remove('d-n');
-			fp.prevEl.classList.add('d-n');
+			fp.nextEl.classList.remove('hidden-btn');
+			fp.prevEl.classList.add('hidden-btn');
+		}
+	}
+	const changeTemplateFullpage = (nextIndex) => {
+		if (nextIndex == 2) {
+			fp.linksWrapper.classList.add('template--gray');
+			fp.prevEl.classList.add('template--green');
+			fp.nextEl.classList.add('template--green');
+			document.querySelector('header').classList.add('template--white');
+		} else {
+			fp.linksWrapper.classList.remove('template--gray');
+			fp.prevEl.classList.remove('template--green');
+			fp.nextEl.classList.remove('template--green');
+			document.querySelector('header').classList.remove('template--white');
 		}
 	}
 	// ACTION AFTER LOADING
