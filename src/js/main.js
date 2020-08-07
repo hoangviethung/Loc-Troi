@@ -65,7 +65,7 @@ const initFullpage = () => {
 		if (fp.getIndex() == 0) {
 			Loading().then(() => {
 				if (fp.getIndex() == 0) {
-					animation.allAnimeFullpageIndex__1();
+					animation.allAnimeFullpageIndex__0();
 				}
 			})
 		}
