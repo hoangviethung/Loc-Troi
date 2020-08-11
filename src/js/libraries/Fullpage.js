@@ -181,7 +181,7 @@ export default class Fullpage {
 					this.slides[this.state.currentIndex],
 					this.slides[this.state.nextIndex],
 					this.state.currentIndex,
-					this.state.nextIndex
+					this.state.nextIndex,
 				);
 			}
 			const element = this.slides[this.state.nextIndex];
@@ -193,26 +193,39 @@ export default class Fullpage {
 					start = timestamp;
 				}
 				const elapsed = timestamp - start;
-
-				// `Math.min()` is used here to make sure that the element stops at exactly 200px.
-				if (this.state.scrollDirection == "down")
+				let elementTransformY;
+				let prevElementTransformY;
+				// `Math.min()` is used here to make sure that the element stops at exactly windowHeight.
+				if (this.state.scrollDirection == "down") {
 					// slideUp when scroll down
-					element.style.transform = `translateY(${
+					elementTransformY =
 						window.innerHeight -
 						Math.min(
 							(window.innerHeight / this.opts.speed) * elapsed,
-							window.innerHeight
-						)
-						}px)`;
-				else {
-					// slideUp down scroll up
-					element.style.transform = `translateY(${
+							window.innerHeight,
+						);
+
+					prevElementTransformY =
+						-1 *
 						Math.min(
 							(window.innerHeight / this.opts.speed) * elapsed,
-							window.innerHeight
-						) - window.innerHeight
-						}px)`;
+							window.innerHeight,
+						);
+				} else {
+					// slideUp down scroll up
+					elementTransformY =
+						Math.min(
+							(window.innerHeight / this.opts.speed) * elapsed,
+							window.innerHeight,
+						) - window.innerHeight;
+
+					prevElementTransformY = Math.min(
+						(window.innerHeight / this.opts.speed) * elapsed,
+						window.innerHeight,
+					);
 				}
+				prevElement.style.transform = `translateY(${prevElementTransformY}px)`;
+				element.style.transform = `translateY(${elementTransformY}px)`;
 
 				if (elapsed < this.opts.speed) {
 					window.requestAnimationFrame(slide);
@@ -224,11 +237,10 @@ export default class Fullpage {
 					this.state.currentIndex = this.state.nextIndex;
 					this.setStateForButtons();
 					this.autoChangeNavigationOnSlide();
-
 					if (typeof this.afterSlideChange == "function") {
 						this.afterSlideChange(
 							this.slides[this.state.currentIndex],
-							this.state.currentIndex
+							this.state.currentIndex,
 						);
 					}
 				}

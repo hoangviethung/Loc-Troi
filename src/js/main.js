@@ -31,6 +31,8 @@ const initFullpage = () => {
 					animation.allAnimeFullpageIndex__4();
 				} else if (currentIndex == 5) {
 					animation.allAnimeFullpageIndex__5();
+				} else if (currentIndex == 6) {
+					animation.allAnimeFullpageIndex__6();
 				}
 			},
 		},

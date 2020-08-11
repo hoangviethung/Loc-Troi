@@ -24,6 +24,10 @@ export const allAnimeFullpageIndex__5 = () => {
 	typographyAnimateStyle__3('.section-shareholder-relations');
 }
 
+export const allAnimeFullpageIndex__6 = () => {
+	typographyAnimateStyle__1('.section-media');
+}
+
 const typographyAnimateStyle__1 = (selector) => {
 	// Wrap every letter in a span
 	const texts = document.querySelectorAll(`${selector} .typography-animate-1`);
