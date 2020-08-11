@@ -84,24 +84,35 @@ const setBackgroundImageSection = () => {
 
 // INIT SLIDER NEW
 const initSliderNews = () => {
-	const news = new Swiper('.slider-news .swiper-container', {
+	const news = new Swiper('.slider-section-news .swiper-container', {
 		slidesPerView: 3,
 		spaceBetween: 27,
 		navigation: {
-			prevEl: '.slider-news-button-prev',
-			nextEl: '.slider-news-button-next',
+			prevEl: '.slider-section-news-button-prev',
+			nextEl: '.slider-section-news-button-next',
 		},
 	})
 }
 
 // INIT SLIDER PRODUCTS
 const initSliderProducts = () => {
-	const products = new Swiper('.slider-products .swiper-container', {
+	const products = new Swiper('.slider-section-products .swiper-container', {
 		slidesPerView: 4,
 		spaceBetween: 22,
 		navigation: {
-			prevEl: '.slider-products-button-prev',
-			nextEl: '.slider-products-button-next',
+			prevEl: '.slider-section-products-button-prev',
+			nextEl: '.slider-section-products-button-next',
+		},
+	})
+}
+
+// INIT SLIDER MEDIA
+const initSliderMedia = () => {
+	const media = new Swiper('.slider-section-media .swiper-container', {
+		slidesPerView: 2,
+		spaceBetween: 22,
+		navigation: {
+			nextEl: '.slider-section-media-button-next',
 		},
 	})
 }
@@ -116,4 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	initSliderNews();
 	// INIT SLIDER PRODUCTS
 	initSliderProducts();
+	// INIT SLIDER MEDIA
+	initSliderMedia();
 });

@@ -6,13 +6,13 @@
 					.text
 						h2(green) TIN TỨC HOẠT ĐỘNG
 						span.line(green)
-				.slider-news
+				.slider-section-news
 					.swiper-container
 						.swiper-wrapper
 							-for(i=1;i<4;i++)
 								.swiper-slide
 									a(href="#").news__item
-										.news__thumbnail.ov-h.background-overlay(style="--url: url(../assets/images/background-overlay/overlay-1.svg)")
+										.news__thumbnail.ov-h.background-overlay.bg-full.bg-multiply(style="--url: url(../assets/images/background-overlay/overlay-1.svg)")
 											img.ofcv(src=`assets/images/index-2/${i}.png`, alt="NEWS")
 										.news__descriptions
 											.news__title.lcl.lcl-2 Lorem Ipsum is simply dummy text of the printing.
@@ -20,7 +20,7 @@
 											.news__readmore
 												.btn.btn-read-more-style-2
 													.text Đọc tiếp
-					.slider-news-button-prev
-					.slider-news-button-next
+					.slider-section-news-button-prev
+					.slider-section-news-button-next
 				.news-read-more.ta-c
 					a.btn.tt-u.btn-read-more-style-1(gray) xem thêm

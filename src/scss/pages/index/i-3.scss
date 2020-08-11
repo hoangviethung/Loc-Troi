@@ -1,92 +1,66 @@
-.section-news {
+.section-products {
 	padding-top: 105px;
 	.section-title-basic {
 		margin-top: 65px;
 	}
-	.news-read-more {
-		margin-top: 30px;
-	}
 }
 
-.slider-news {
-	position: relative;
+.slider-section-products {
 	margin-top: 50px;
-	.news__item {
+	.product__item {
 		display: block;
-		padding: 25px;
+		padding: 25px 0;
+		background: rgba($color: #1e5600, $alpha: 0.4);
 		margin: 10px 0;
-		box-shadow: 0 3px 6px
-			rgba($color: map-get($color, x-black), $alpha: 0.16);
-		background: map-get($color, x-white);
 	}
-	.news__descriptions {
-		margin-top: 25px;
+	.product__thumbnail {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 270px;
 	}
-	.news__title {
-		color: #008347;
-		font-size: 2.5rem;
-		font-weight: 700;
-		height: 60px;
-	}
-	.news__desc {
-		height: 57px;
-		color: map-get($color, x-gray);
-		margin-top: 5px;
-		margin-bottom: 12px;
-	}
-	.slider-news-button-prev,
-	.slider-news-button-next {
-		cursor: pointer;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 50px;
-		height: 50px;
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		&.swiper-button-disabled {
-			opacity: 0.5;
+	.product__descriptions {
+		> div {
+			padding: 0 25px;
 		}
-		@media (min-width: 1025px) {
-			transition: 0.3s all ease-in-out;
-			&:hover {
-				transform: translateY(-50%) scale(1.1);
+		.product__name {
+			color: map-get($color, x-white);
+			font-size: 25px;
+			margin-bottom: 10px;
+			height: 30px;
+		}
+		.product__desc {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 35px;
+			padding-top: 10px;
+			border-top: 1px solid rgba($color: #fcf8f4, $alpha: 0.5);
+		}
+		.desc__item {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			padding-right: 5px;
+			p {
+				color: map-get($color, x-white);
 			}
 		}
-	}
-	.slider-news-button-prev {
-		right: 100%;
-		margin-right: 15px;
-		background-image: url(../assets/icons/arrow-left-green.svg);
-	}
-	.slider-news-button-next {
-		left: 100%;
-		margin-left: 15px;
-		background-image: url(../assets/icons/arrow-right-green.svg);
 	}
 
-	// HOVER HERE !!!
 	@media (min-width: 1025px) {
-		.news__item {
+		.product__item {
 			transition: 0.3s all ease-in-out;
-			.news__title,
-			.news__desc {
+		}
+		.product__readmore {
+			.btn-read-more-style-2 {
 				transition: 0.3s all ease-in-out;
 			}
-			.news__readmore {
-				.btn-read-more-style-2 {
-					transition: 0.3s all ease-in-out;
-				}
-			}
+		}
+		.product__item {
 			&:hover {
 				background: #008347;
-				box-shadow: 0px 3px 6px
-					rgba($color: map-get($color, x-black), $alpha: 0.86);
-				.news__title,
-				.news__desc {
-					color: map-get($color, x-white);
-				}
-				.news__readmore {
+				box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.72);
+				.product__readmore {
 					.btn-read-more-style-2 {
 						border: 1px solid map-get($color, x-white);
 					}
