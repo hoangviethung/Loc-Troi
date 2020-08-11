@@ -119,7 +119,6 @@ const initSliderMedia = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	getSVGs();
-	Loading();
 	// INIT FULLPAGE
 	initFullpage();
 	// SET BACKGROUND IMAGE SECTION
