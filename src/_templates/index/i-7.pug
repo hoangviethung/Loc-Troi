@@ -1,0 +1,22 @@
+.fp-slide(fp-tooltip="Liên hệ")
+	section.setting-section.section-media(fp-bg="../assets/images/background-fullpage/index-7.png")
+		.container
+			.container-custom.container-1385px
+				.row
+					.col-5.media-content
+						.col-md-11
+							h2 MEDIA
+							p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu
+							a XEM THÊM 
+								//- |
+								//- span >>
+					.col-7
+						.swiper-container
+							.swiper-wrapper
+								-for(var i = 0; i < 3; i++)
+									.swiper-slide
+										img(src="./assets/images/background-fullpage/media-item-1.png")
+										p.lcl.lcl-2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+							.button-cua-tao-prev
+								.img(src='./assets/icons/arrow-left-white.svg')
+							.button-cua-tao-next

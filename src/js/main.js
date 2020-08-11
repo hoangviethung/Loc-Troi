@@ -74,13 +74,13 @@ const initFullpage = () => {
 
 const setBackgroundImageSection = () => {
 	// PARAMS HERE !!!
-	const datas = document.querySelectorAll('[fp-bg]');
+	const datas = document.querySelectorAll("[fp-bg]");
 	// ACTION !!!
 	datas.forEach((item) => {
-		const link = item.getAttribute('fp-bg')
-		item.setAttribute('style', `background-image:url(${link})`);
-	})
-}
+		const link = item.getAttribute("fp-bg");
+		item.setAttribute("style", `background-image:url(${link})`);
+	});
+};
 
 // INIT SLIDER NEW
 const initSliderNews = () => {
@@ -119,6 +119,7 @@ const initSliderMedia = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 	getSVGs();
+	Loading();
 	// INIT FULLPAGE
 	initFullpage();
 	// SET BACKGROUND IMAGE SECTION
