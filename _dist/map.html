@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Page | Google map</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shortcut icon" type="image/png" href="/favicon/favicon.ico">
+		<link rel="stylesheet" href="./css/core.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+	</head>
+	<body>
+		<header>
+			<div class="container h-100">
+				<div class="container-custom container-1385px h-100">
+					<div class="header__logo"><a class="headerLogo__link" href="index.html"><img class="lazyload blur-up" data-src="./assets/logo.png" alt="LOC-TROI"></a></div>
+					<div class="header__nav--top">
+						<div class="navtop__wrapper">
+							<div class="header__languages language">
+								<div class="languages__item item" data-language="vi"><a class="languages__link" href="#">VN</a></div>
+								<div class="languages__item item" data-language="en"></div><a class="languages__link" href="#">ENG</a>
+							</div>
+							<div class="header__quick-links">
+								<div class="quick-links__item"><a class="item__link" href="#">Tuyển dụng</a></div>
+							</div>
+							<div class="header__search">
+								<form action="#">
+									<div class="search__form">
+										<div class="search__input">
+											<input type="search" placeholder="...">
+										</div>
+										<div class="searh__button">
+											<button class="btn">
+												<div class="icon"><img class="svg" src="./assets/icons/search.svg" alt="SEARCH"></div>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="header__nav--bottom">
+						<div class="hamburgerIcon"><span></span><span></span><span></span></div>
+						<div class="navbottom__wrapper">
+							<div class="nav-bar">
+								<div class="navBar__item" fp-target="1" scroll-to="about"><a class="navBar__link" href="#">giới thiệu</a></div>
+								<div class="navBar__item" fp-target="2" scroll-to="news"><a class="navBar__link" href="#">tin tức</a></div>
+								<div class="navBar__item" fp-target="3" scroll-to="products"><a class="navBar__link" href="#">sản phẩm</a></div>
+								<div class="navBar__item" fp-target="5" scroll-to="relations"><a class="navBar__link" href="#">quan hệ cổ đông</a></div>
+								<div class="navBar__item" fp-target="4" scroll-to="development"><a class="navBar__link" href="#">phát triển bền vững</a></div>
+								<div class="navBar__item" fp-target="6" scroll-to="media"><a class="navBar__link" href="#">media</a></div>
+								<div class="navBar__item" fp-target="7" scroll-to="contact"><a class="navBar__link" href="#">liên hệ</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="map-wrapper">
+				<div class="row no-gutters">
+					<div class="col-lg-3">
+						<div class="dealer-locator-list">
+							<div class="list"></div>
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
+			<div class="google-map-page" id="js-page-verify" hidden></div>
+		</main>
+		<footer></footer>
+		<div id="overlay"></div>
+		<script type="text/javascript" src="./js/core.min.js"></script>
+		<script type="text/javascript" src="./js/main.min.js"></script>
+		<script>
+			var locationsInput = [
+				{
+					lat: 10.8511063,
+					lng: 106.6867113,
+					title: 'Home',
+					address: '134/8A, Trần Bá Giao, Q.Gò Vấp, Tp. HCM',
+					phone: '0914.633.990'
+				},
+				{
+					lat: 12.1275322,
+					lng: 104.1095803,
+					title: 'Company',
+					address: '192/68, Nguyễn Oanh, Q.Gò Vấp, TP.HCM',
+					phone: '0905.010.115'
+				},
+				{
+					lat: 57.4483839,
+					lng: -99.8296627,
+					title: 'Company',
+					address: '192/68, Nguyễn Oanh, Q.Gò Vấp, TP.HCM',
+					phone: '0905.010.115'
+				},
+				{
+					lat: 10.8511010,
+					lng: 106.6867194,
+					title: 'Company',
+					address: '192/68, Nguyễn Oanh, Q.Gò Vấp, TP.HCM',
+					phone: '0905.010.115'
+				},
+			]
+		</script>
+		<script src="./js/GoogleMapController.min.js"></script>
+	</body>
+</html>

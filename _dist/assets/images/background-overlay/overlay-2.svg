@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="335" height="293" viewBox="0 0 335 293">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#148a38"/>
+      <stop offset="1" stop-color="#0a451c" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="IFPR-_-UK_s-new-prudential-regime-unveiled-scaled" data-name="IFPR-–-UK’s-new-prudential-regime-unveiled-scaled" width="335" height="293" transform="translate(335 293) rotate(180)" opacity="0.7" fill="url(#linear-gradient)"/>
+</svg>
