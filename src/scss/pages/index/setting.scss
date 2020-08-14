@@ -70,11 +70,46 @@
 }
 
 .section-image-circle {
+	position: relative;
+	animation: pulse 2s infinite;
+	border-radius: 50%;
+
+	&:after,
+	&:before {
+		content: "";
+		position: absolute;
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: pulse 2s infinite;
+	}
+
+	&:after {
+		width: 130%;
+		height: 130%;
+		border: 2px solid rgba($color: map-get($color, x-irish), $alpha: 1);
+	}
+
+	&:before {
+		width: 160%;
+		height: 160%;
+		border: 1px solid rgba($color: map-get($color, x-irish), $alpha: 1);
+		animation: pulse 2s infinite;
+	}
+
 	.img {
 		width: 231px;
 		height: 231px;
 		border-radius: 50%;
 		border: 3px solid map-get($color, x-irish);
+	}
+
+	@media (max-width: 1024.98px) {
+		&:after,
+		&:before {
+			content: none;
+		}
 	}
 }
 
