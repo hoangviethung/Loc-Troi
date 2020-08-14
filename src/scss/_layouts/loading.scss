@@ -30,7 +30,7 @@
 	}
 
 	.progress {
-		height: 15px;
+		height: 9px;
 		background-color: #e9ecef;
 		box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 3px black;
 		border-radius: 8px;
@@ -41,7 +41,7 @@
 		max-width: 100%;
 		width: 0%;
 		height: 100%;
-		background-color: #ff9e0c;
+		background-color: map-get($color, x-green);
 		background-image: linear-gradient(
 			45deg,
 			rgba(255, 255, 255, 0.3) 25%,
@@ -58,10 +58,11 @@
 	}
 
 	.progress-status {
+		color: map-get($color, x-green);
 		margin-top: 15px;
 		text-align: center;
 		font-size: 16px;
-		letter-spacing: 3px;
+		letter-spacing: 5px;
 		font-weight: 600;
 	}
 }
