@@ -2,11 +2,17 @@
 	@media (max-width: 1024.98px) {
 		height: 500px;
 	}
+	@media (max-width: 575.98px) {
+		height: 450px;
+	}
 	.section-text {
 		position: absolute;
 		left: 250px;
 		top: 50%;
 		transform: translateY(-50%);
+		@media (max-width: 1439.98px) {
+			left: 100px;
+		}
 		@media (max-width: 1024.98px) {
 			width: 100%;
 			left: 0;
@@ -24,10 +30,35 @@
 				}
 			}
 		}
-		@media (max-width: 575.98px) {
-			top: 40%;
+		@media (max-width: 730.98px) {
 			.text {
-				text-align: left;
+				&:nth-child(1) {
+					font-size: 4rem;
+				}
+				&:nth-child(2) {
+					font-size: 7rem;
+				}
+				&:nth-child(3) {
+					font-size: 5rem;
+				}
+			}
+		}
+		@media (max-width: 620.98px) {
+			.text {
+				&:nth-child(1) {
+					font-size: 3rem;
+				}
+				&:nth-child(2) {
+					font-size: 6rem;
+				}
+				&:nth-child(3) {
+					font-size: 4rem;
+				}
+			}
+		}
+		@media (max-width: 575.98px) {
+			top: 38%;
+			.text {
 				&:nth-child(1) {
 					font-size: 3rem;
 				}
@@ -60,19 +91,29 @@
 .development-desc {
 	margin-top: 20px;
 	max-width: 390px;
+	@media (max-width: 1024.98px) {
+		max-width: 50%;
+	}
+	@media (max-width: 575.98px) {
+		max-width: 100%;
+	}
 }
 
 .development-img {
 	position: absolute;
 	right: 0;
-	bottom: 40px;
+	bottom: 20px;
 	@media (max-width: 1199.98px) {
 		bottom: 0;
 	}
 	@media (max-width: 1024.98px) {
 		bottom: unset;
 		top: 50%;
+		right: 15%;
 		transform: translateY(-50%);
+	}
+	@media (max-width: 950.98px) {
+		right: 0;
 	}
 	@media (max-width: 575.98px) {
 		top: 115%;

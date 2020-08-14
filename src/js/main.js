@@ -102,6 +102,7 @@ const initSliderNews = () => {
 			prevEl: '.slider-section-news-button-prev',
 			nextEl: '.slider-section-news-button-next',
 		},
+		speed: 1000,
 		breakpoints: {
 			1024: {
 				slidesPerView: 3,
@@ -124,6 +125,7 @@ const initSliderProducts = () => {
 			prevEl: '.slider-section-products-button-prev',
 			nextEl: '.slider-section-products-button-next',
 		},
+		speed: 1000,
 		breakpoints: {
 			450: {
 				slidesPerView: 2,

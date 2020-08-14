@@ -16,18 +16,56 @@
 		left: 0;
 		@media (max-width: 1500px) {
 			left: 100px;
+			.text {
+				&:nth-child(2) {
+					font-size: 12rem;
+				}
+			}
 		}
 		@media (max-width: 1439.98px) {
 			left: 0;
 		}
-		@media (max-width: 1024.98px) {
+		@media (max-width: 985.98px) {
 			.text {
 				&:nth-child(1),
 				&:nth-child(3) {
 					font-size: 8rem;
 				}
 				&:nth-child(2) {
-					font-size: 8.5rem;
+					font-size: 9rem;
+				}
+			}
+		}
+		@media (max-width: 768.98px) {
+			.text {
+				&:nth-child(1),
+				&:nth-child(3) {
+					font-size: 7.5rem;
+				}
+				&:nth-child(2) {
+					font-size: 8rem;
+				}
+			}
+		}
+		@media (max-width: 700.98px) {
+			.text {
+				&:nth-child(1),
+				&:nth-child(3) {
+					font-size: 6rem;
+				}
+				&:nth-child(2) {
+					font-size: 7rem;
+				}
+			}
+		}
+		@media (max-width: 650.98px) {
+			.text {
+				&:nth-child(1),
+				&:nth-child(3) {
+					font-size: 5rem;
+				}
+				&:nth-child(2) {
+					font-size: 6rem;
 				}
 			}
 		}
