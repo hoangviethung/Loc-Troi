@@ -8,6 +8,11 @@
 				font-size: 8rem;
 			}
 		}
+		@media (max-width: 575.98px) {
+			.text {
+				font-size: 6rem;
+			}
+		}
 	}
 	@media (max-width: 767.98px) {
 		height: unset;
@@ -75,6 +80,13 @@
 	}
 	@media (max-width: 767.98px) {
 		margin-top: 35px;
+	}
+	@media (max-width: 575.98px) {
+		.slider-section-media-button-prev,
+		.slider-section-media-button-next {
+			width: 30px;
+			height: 30px;
+		}
 	}
 }
 

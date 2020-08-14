@@ -33,6 +33,8 @@ const initFullpage = () => {
 					animation.allAnimeFullpageIndex__5();
 				} else if (currentIndex == 6) {
 					animation.allAnimeFullpageIndex__6();
+				} else if (currentIndex == 7) {
+					animation.allAnimeFullpageIndex__7();
 				}
 			},
 		},
@@ -164,9 +166,11 @@ const showMenuMobile = () => {
 const showBlockService = () => {
 	const btn = document.querySelector('.button-show-block-service');
 	const blockService = document.querySelector('.section-services');
-	btn.addEventListener('click', (e) => {
-		blockService.classList.toggle('show');
-	})
+	if (btn) {
+		btn.addEventListener('click', (e) => {
+			blockService.classList.toggle('show');
+		})
+	}
 }
 
 const actionClickMenuPC = () => {
@@ -187,6 +191,8 @@ const actionClickMenuPC = () => {
 				triggers.filter(item => item.getAttribute('fp-target') == 5)[0].click();
 			} else if (item__index == 6) {
 				triggers.filter(item => item.getAttribute('fp-target') == 6)[0].click();
+			} else if (item__index == 7) {
+				triggers.filter(item => item.getAttribute('fp-target') == 7)[0].click();
 			}
 		})
 	})
@@ -212,6 +218,8 @@ const actionClickMenuMB = () => {
 				sections.filter(item => item.getAttribute('id') == "relations")[0].scrollIntoView({ block: 'center', behavior: "smooth" })
 			} else if (item__index == 6) {
 				sections.filter(item => item.getAttribute('id') == "media")[0].scrollIntoView({ block: 'center', behavior: "smooth" })
+			} else if (item__index == 7) {
+				sections.filter(item => item.getAttribute('id') == "contact")[0].scrollIntoView({ block: 'center', behavior: "smooth" })
 			}
 			// RESET ALL ACTIONs
 			resetAllActionMenuMobile();

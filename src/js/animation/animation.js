@@ -27,6 +27,9 @@ export const allAnimeFullpageIndex__5 = () => {
 export const allAnimeFullpageIndex__6 = () => {
 	typographyAnimateStyle__1('.section-media');
 }
+export const allAnimeFullpageIndex__7 = () => {
+	typographyAnimateStyle__1('.section-contact');
+}
 
 const typographyAnimateStyle__1 = (selector) => {
 	// Wrap every letter in a span

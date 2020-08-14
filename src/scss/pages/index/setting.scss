@@ -48,6 +48,9 @@
 		&[white] {
 			color: map-get($color, x-white);
 		}
+		@media (max-width: 575.98px) {
+			font-size: 3rem;
+		}
 	}
 	.line {
 		position: absolute;
