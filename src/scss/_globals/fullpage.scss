@@ -295,6 +295,18 @@
 	.social__item + .social__item {
 		margin-left: 25px;
 	}
+	&.template--gray {
+		.socials {
+			&:after {
+				background: rgba($color: #707070, $alpha: 1);
+			}
+		}
+		svg {
+			path {
+				fill: #707070;
+			}
+		}
+	}
 	@media (max-width: 1024.98px) {
 		display: none;
 	}

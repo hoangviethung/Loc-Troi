@@ -62,11 +62,13 @@ const initFullpage = () => {
 			fp.prevEl.classList.add('template--green');
 			fp.nextEl.classList.add('template--green');
 			document.querySelector('header').classList.add('template--white');
+			document.querySelector('.fp-socials').classList.add('template--gray');
 		} else {
 			fp.linksWrapper.classList.remove('template--gray');
 			fp.prevEl.classList.remove('template--green');
 			fp.nextEl.classList.remove('template--green');
 			document.querySelector('header').classList.remove('template--white');
+			document.querySelector('.fp-socials').classList.remove('template--gray');
 		}
 	}
 	// ACTION AFTER LOADING
