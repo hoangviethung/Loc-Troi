@@ -2,22 +2,107 @@
 	padding-top: 105px;
 	.section-title-basic {
 		margin-top: 65px;
+		@media (max-width: 1024.98px) {
+			margin-top: 0;
+		}
+	}
+	@media (max-width: 1024.98px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@media (max-width: 575.98px) {
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
 }
 
 .slider-section-products {
+	position: relative;
 	margin-top: 50px;
+
+	@media (max-width: 1024.98px) {
+		margin-top: 25px;
+	}
 	.product__item {
 		display: block;
 		padding: 25px 0;
 		background: rgba($color: #1e5600, $alpha: 0.4);
 		margin: 10px 0;
 	}
+
+	.slider-section-products-button-prev,
+	.slider-section-products-button-next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50px;
+		height: 50px;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		&.swiper-button-disabled {
+			opacity: 0.5;
+		}
+
+		@media (min-width: 1440px) {
+			transition: 0.3s all ease-in-out;
+			&:hover {
+				transform: translateY(-50%) scale(1.1);
+			}
+		}
+		@media (max-width: 1439.98px) {
+			top: 0;
+			transform: unset;
+			width: 35px;
+			height: 35px;
+		}
+		@media (max-width: 575.98px) {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	.slider-section-products-button-prev {
+		right: 100%;
+		margin-right: 15px;
+		background-image: url(../assets/icons/arrow-left-white.svg);
+		@media (max-width: 1719.98px) {
+			right: unset;
+			left: 0;
+			margin-right: 0;
+		}
+		@media (max-width: 1439.98px) {
+			margin-right: 0;
+			left: unset;
+			right: 50px;
+		}
+		@media (max-width: 575.98px) {
+			right: 45px;
+		}
+	}
+
+	.slider-section-products-button-next {
+		left: 100%;
+		margin-left: 15px;
+		background-image: url(../assets/icons/arrow-right-white.svg);
+		@media (max-width: 1719.98px) {
+			left: unset;
+			right: 0;
+			margin-left: 0;
+		}
+	}
+
 	.product__thumbnail {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 270px;
+		img {
+			height: 80%;
+		}
+		@media (max-width: 767.98px) {
+			height: 200px;
+		}
 	}
 	.product__descriptions {
 		> div {
@@ -45,6 +130,17 @@
 				color: map-get($color, x-white);
 			}
 		}
+	}
+
+	@media (max-width: 1719.98px) {
+		padding-right: 75px;
+		padding-left: 75px;
+	}
+
+	@media (max-width: 1439.98px) {
+		padding-top: 35px;
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 	@media (min-width: 1025px) {

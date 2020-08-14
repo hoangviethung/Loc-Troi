@@ -1,13 +1,35 @@
+.section-about {
+	@media (max-width: 1024.98px) {
+		height: 500px;
+	}
+	@media (max-width: 767.98px) {
+		height: unset;
+		padding: 50px 0;
+		.section-image-shadow {
+			margin-top: 25px;
+		}
+	}
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+	}
+}
+
 .section-about__wrapper {
 	width: 100%;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	@media (max-width: 767.98px) {
+		position: static;
+		top: unset;
+		transform: unset;
+	}
 }
 
 .about-informations {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 0 -10px;
 }
 
 .information__item {
@@ -15,10 +37,14 @@
 	flex: 0 0 50%;
 	max-width: 50%;
 	margin-bottom: 50px;
+	padding: 0 10px;
 	// CUSTOM MARGIN-BOTTOM
 	&:nth-last-child(1),
 	&:nth-last-child(2) {
 		margin-bottom: 0;
+	}
+	@media (max-width: 1024.98px) {
+		margin-bottom: 25px;
 	}
 }
 
@@ -27,6 +53,9 @@
 	font-weight: 700;
 	font-style: italic;
 	color: map-get($color, x-white);
+	@media (max-width: 1024.98px) {
+		font-size: 4rem;
+	}
 }
 
 .information__text {
@@ -36,6 +65,11 @@
 		font-weight: 700;
 		font-style: italic;
 	}
+	@media (max-width: 1024.98px) {
+		p {
+			font-size: 1.5rem;
+		}
+	}
 }
 
 .information__wrapper {
@@ -44,6 +78,9 @@
 
 .about-desc {
 	margin-top: 65px;
+	@media (max-width: 1024.98px) {
+		margin-top: 30px;
+	}
 }
 
 .about-read-more {

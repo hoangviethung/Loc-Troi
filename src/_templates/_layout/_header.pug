@@ -22,21 +22,25 @@ header
 								.searh__button
 									button.btn
 										.icon
-											img(src="./assets/icons/search.svg", alt="SEARCH")
+											img.svg(src="./assets/icons/search.svg", alt="SEARCH")
 			.header__nav--bottom
+				.hamburgerIcon
+					span
+					span
+					span
 				.navbottom__wrapper
 					.nav-bar
-						.navBar__item.fp-nav-item
+						.navBar__item(fp-target="1" scroll-to="about")
 							a(href="#").navBar__link giới thiệu
-						.navBar__item.fp-nav-item
+						.navBar__item(fp-target="2" scroll-to="news")
 							a(href="#").navBar__link tin tức
-						.navBar__item.fp-nav-item
+						.navBar__item(fp-target="3" scroll-to="products")
 							a(href="#").navBar__link sản phẩm
-						.navBar__item.fp-nav-item
+						.navBar__item(fp-target="5" scroll-to="relations")
 							a(href="#").navBar__link quan hệ cổ đông
-						.navBar__item.fp-nav-item
+						.navBar__item(fp-target="4" scroll-to="development")
 							a(href="#").navBar__link phát triển bền vững
-						.navBar__item.fp-nav-item
+						.navBar__item(fp-target="6" scroll-to="media")
 							a(href="#").navBar__link media
-						.navBar__item.fp-nav-item
+						.navBar__item
 							a(href="#").navBar__link liên hệ

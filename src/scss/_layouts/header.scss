@@ -6,6 +6,10 @@ header {
 	background: rgba($color: map-get($color, x-black), $alpha: 0.2);
 	z-index: 600;
 	transition: 0.5s all ease-in-out;
+	@media (max-width: 1024.98px) {
+		background: rgba($color: map-get($color, x-white), $alpha: 1);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+	}
 }
 
 .header__logo {
@@ -13,15 +17,33 @@ header {
 	left: 10px;
 	top: 50%;
 	transform: translateY(-50%);
+	@media (max-width: 1024.98px) {
+		img {
+			display: block;
+			width: 70%;
+			margin-right: auto;
+		}
+	}
+}
+
+.headerLogo__link {
+	display: block;
 }
 
 .header__nav--top {
 	padding-top: 24px;
+	@media (max-width: 1024.98px) {
+		padding-top: 10px;
+	}
 }
 
 .header__nav--bottom {
 	padding-top: 22px;
 	padding-bottom: 13px;
+	@media (max-width: 1024.98px) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
 }
 
 .navtop__wrapper {
@@ -35,6 +57,9 @@ header {
 	margin-left: auto;
 	.languages__link {
 		color: map-get($color, x-white);
+		@media (max-width: 1024.98px) {
+			color: map-get($color, x-black);
+		}
 	}
 	.languages__item + .languages__item {
 		position: relative;
@@ -49,6 +74,11 @@ header {
 			position: absolute;
 			color: map-get($color, x-white);
 		}
+		@media (max-width: 1024.98px) {
+			&:after {
+				color: map-get($color, x-black);
+			}
+		}
 	}
 }
 
@@ -59,8 +89,12 @@ header {
 		margin-left: 10px;
 	}
 	.item__link {
-		font-size: 17px;
+		font-size: 1.7rem;
 		color: map-get($color, x-white);
+		@media (max-width: 1024.98px) {
+			font-size: 1.6rem;
+			color: map-get($color, x-black);
+		}
 	}
 }
 
@@ -72,7 +106,7 @@ header {
 	.search__input {
 		input {
 			color: map-get($color, x-white);
-			background: rgba($color: #ffffff, $alpha: 0.3);
+			background: rgba($color: map-get($color, x-white), $alpha: 0.3);
 			border: 0;
 			height: 28px;
 			padding: 0 35px 0 20px;
@@ -82,7 +116,13 @@ header {
 			&::placeholder {
 				color: #dedede;
 			}
+			@media (max-width: 1024.98px) {
+				background: rgba($color: map-get($color, x-black), $alpha: 0.3);
+			}
 		}
+	}
+	@media (max-width: 767.98px) {
+		display: none;
 	}
 }
 
@@ -99,21 +139,108 @@ header {
 .navbottom__wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	@media (max-width: 767.98px) {
+		position: fixed;
+		width: 70%;
+		right: -100%;
+		height: 100vh;
+		background: map-get($color, x-white);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+		transition: 0.6s all ease-in-out;
+		&.show {
+			right: 0;
+		}
+	}
 }
 
 .nav-bar {
 	margin-left: auto;
 	display: flex;
+	flex-wrap: wrap;
+	@media (max-width: 767.98px) {
+		width: 100%;
+		height: 100%;
+		padding-top: 15px;
+		margin-left: 0;
+		flex-direction: column;
+	}
+}
+
+.navBar__item {
+	@media (max-width: 767.98px) {
+		padding: 0 15px;
+		border-bottom: 1px solid #dedede;
+		padding-bottom: 10px;
+	}
 }
 
 .navBar__item + .navBar__item {
 	margin-left: 40px;
+	@media (max-width: 1199.98px) {
+		margin-left: 20px;
+	}
+	@media (max-width: 1024.98px) {
+		margin-left: 15px;
+	}
+	@media (max-width: 767.98px) {
+		margin-left: 0;
+		margin-top: 10px;
+	}
 }
 
 .navBar__link {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	color: map-get($color, x-white);
+	@media (max-width: 1024.98px) {
+		font-size: 1.6rem;
+		color: map-get($color, x-black);
+	}
+}
+
+.hamburgerIcon {
+	display: none;
+	position: relative;
+	width: 20px;
+	height: 12px;
+	margin-left: auto;
+	span {
+		position: absolute;
+		height: 1px;
+		background-color: map-get($color, x-black);
+		width: 100%;
+		transition: 0.3s all ease-in-out;
+		&:nth-child(1) {
+			top: 0px;
+		}
+		&:nth-child(2) {
+			top: 5px;
+		}
+		&:nth-child(3) {
+			top: 10px;
+		}
+	}
+	&.active {
+		span {
+			&:nth-child(1) {
+				transform: translateY(-50%) rotate(-45deg);
+			}
+			&:nth-child(2) {
+				transform: translateX(35px);
+				background: transparent;
+			}
+			&:nth-child(3) {
+				transform: translateY(-50%) rotate(45deg);
+			}
+			&:nth-child(1),
+			&:nth-child(3) {
+				top: 50%;
+			}
+		}
+	}
+	@media (max-width: 767.98px) {
+		display: block;
+	}
 }
 
 // CUSTOM TEMPLATE

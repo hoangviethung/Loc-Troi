@@ -1,11 +1,16 @@
-.container,
-.container-custom {
+.container {
 	width: 100%;
 	padding-right: 10px;
 	padding-left: 10px;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
+}
+.container-custom {
+	position: relative;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 @media (min-width: 1025px) {

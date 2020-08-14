@@ -2,9 +2,23 @@
 	padding-top: 105px;
 	.section-title-basic {
 		margin-top: 65px;
+		@media (max-width: 1024.98px) {
+			margin-top: 0;
+		}
 	}
 	.news-read-more {
 		margin-top: 30px;
+		@media (max-width: 1024.98px) {
+			margin-top: 15px;
+		}
+	}
+	@media (max-width: 1024.98px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@media (max-width: 575.98px) {
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
 }
 
@@ -14,10 +28,13 @@
 	.news__item {
 		display: block;
 		padding: 25px;
-		margin: 10px 0;
+		margin: 10px 5px;
 		box-shadow: 0 3px 6px
 			rgba($color: map-get($color, x-black), $alpha: 0.16);
 		background: map-get($color, x-white);
+		@media (max-width: 575.98px) {
+			padding: 15px;
+		}
 	}
 	.news__descriptions {
 		margin-top: 25px;
@@ -27,12 +44,18 @@
 		font-size: 2.5rem;
 		font-weight: 700;
 		height: 60px;
+		@media (max-width: 767.98px) {
+			height: 50px;
+		}
 	}
 	.news__desc {
-		height: 57px;
+		height: 55px;
 		color: map-get($color, x-gray);
 		margin-top: 5px;
 		margin-bottom: 12px;
+		@media (max-width: 767.98px) {
+			height: 50px;
+		}
 	}
 	.slider-section-news-button-prev,
 	.slider-section-news-button-next {
@@ -47,24 +70,62 @@
 		&.swiper-button-disabled {
 			opacity: 0.5;
 		}
-		@media (min-width: 1025px) {
+
+		@media (min-width: 1440px) {
 			transition: 0.3s all ease-in-out;
 			&:hover {
 				transform: translateY(-50%) scale(1.1);
 			}
+		}
+		@media (max-width: 1439.98px) {
+			top: 0;
+			transform: unset;
+			width: 35px;
+			height: 35px;
+		}
+		@media (max-width: 575.98px) {
+			width: 30px;
+			height: 30px;
 		}
 	}
 	.slider-section-news-button-prev {
 		right: 100%;
 		margin-right: 15px;
 		background-image: url(../assets/icons/arrow-left-green.svg);
+		@media (max-width: 1719.98px) {
+			right: unset;
+			left: 0;
+			margin-right: 0;
+		}
+		@media (max-width: 1439.98px) {
+			margin-right: 0;
+			left: unset;
+			right: 50px;
+		}
+		@media (max-width: 575.98px) {
+			right: 45px;
+		}
 	}
 	.slider-section-news-button-next {
 		left: 100%;
 		margin-left: 15px;
 		background-image: url(../assets/icons/arrow-right-green.svg);
+		@media (max-width: 1719.98px) {
+			left: unset;
+			right: 0;
+			margin-left: 0;
+		}
+	}
+	@media (max-width: 1719.98px) {
+		padding-right: 75px;
+		padding-left: 75px;
 	}
 
+	@media (max-width: 1439.98px) {
+		padding-top: 35px;
+		padding-right: 0;
+		padding-left: 0;
+	}
 	// HOVER HERE !!!
 	@media (min-width: 1025px) {
 		.news__item {
@@ -93,5 +154,9 @@
 				}
 			}
 		}
+	}
+
+	@media (max-width: 1024.98px) {
+		margin-top: 25px;
 	}
 }

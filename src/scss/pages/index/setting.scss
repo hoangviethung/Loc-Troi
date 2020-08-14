@@ -84,7 +84,9 @@
 	padding-right: 28px;
 	margin-left: auto;
 	.img {
+		position: relative;
 		border-radius: 10px;
+		z-index: 5;
 	}
 	&:after {
 		content: "";
@@ -95,7 +97,6 @@
 		border-radius: 10px;
 		right: 0;
 		bottom: 0;
-		z-index: -1;
 	}
 }
 

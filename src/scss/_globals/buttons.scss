@@ -17,15 +17,14 @@
 	&:after {
 		content: "";
 		position: absolute;
-		width: 18px;
-		height: 18px;
+		width: 1.6rem;
+		height: 1.6rem;
 		right: 0;
 		top: 50%;
 		transform: translateY(-50%);
 		background-image: url(../assets/icons/double-arrow-right-white.svg);
 		background-size: 100% 100%;
 	}
-
 	&[gray] {
 		color: map-get($color, x-gray);
 		&:after {
