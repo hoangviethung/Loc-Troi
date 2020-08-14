@@ -104,6 +104,7 @@
 			height: 200px;
 		}
 	}
+
 	.product__descriptions {
 		> div {
 			padding: 0 25px;
@@ -128,6 +129,9 @@
 			padding-right: 5px;
 			p {
 				color: map-get($color, x-white);
+			}
+			span {
+				padding-left: 5px;
 			}
 		}
 	}

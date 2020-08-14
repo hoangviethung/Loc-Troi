@@ -206,8 +206,8 @@ header {
 	margin-left: auto;
 	span {
 		position: absolute;
-		height: 1px;
-		background-color: map-get($color, x-black);
+		height: 2px;
+		background-color: rgba($color: map-get($color, x-black), $alpha: 0.7);
 		width: 100%;
 		transition: 0.3s all ease-in-out;
 		&:nth-child(1) {

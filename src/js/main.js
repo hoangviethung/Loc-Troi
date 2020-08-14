@@ -104,12 +104,16 @@ const initSliderNews = () => {
 		},
 		speed: 1000,
 		breakpoints: {
-			1024: {
-				slidesPerView: 3,
-				spaceBetween: 27,
-			},
-			450: {
+			575: {
 				slidesPerView: 2,
+				spaceBetween: 5,
+			},
+			767.98: {
+				slidesPerView: 3,
+				spaceBetween: 5,
+			},
+			1025: {
+				slidesPerView: 3,
 				spaceBetween: 27,
 			}
 		}
@@ -127,11 +131,14 @@ const initSliderProducts = () => {
 		},
 		speed: 1000,
 		breakpoints: {
-			450: {
+			575: {
 				slidesPerView: 2,
 			},
 			1025: {
 				slidesPerView: 4,
+			},
+			769: {
+				slidesPerView: 3,
 			},
 		}
 	})
@@ -170,6 +177,7 @@ const showBlockService = () => {
 	const blockService = document.querySelector('.section-services');
 	if (btn) {
 		btn.addEventListener('click', (e) => {
+			btn.classList.toggle('active');
 			blockService.classList.toggle('show');
 		})
 	}
@@ -239,6 +247,7 @@ const resetAllActionMenuMobile = () => {
 
 const resetAllActionBlockService = () => {
 	document.querySelector('.section-services').classList.remove('show');
+	document.querySelector('.button-show-block-service').classList.remove('active');
 }
 
 // SETTING LAYOUT MOBILE

@@ -32,7 +32,7 @@
 		box-shadow: 0 3px 6px
 			rgba($color: map-get($color, x-black), $alpha: 0.16);
 		background: map-get($color, x-white);
-		@media (max-width: 575.98px) {
+		@media (max-width: 1024.98px) {
 			padding: 15px;
 		}
 	}
@@ -44,12 +44,15 @@
 		font-size: 2.5rem;
 		font-weight: 700;
 		height: 60px;
+		@media (max-width: 1024.98px) {
+			height: 55px;
+		}
 		@media (max-width: 767.98px) {
 			height: 50px;
 		}
 	}
 	.news__desc {
-		height: 55px;
+		height: 54px;
 		color: map-get($color, x-gray);
 		margin-top: 5px;
 		margin-bottom: 12px;
